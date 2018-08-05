@@ -13,7 +13,6 @@ public class ProdutosHandler extends DefaultHandler{
 	private StringBuilder conteudo;
 	private Produto produto;
 
-
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 		if(qName.equals("produto")){
@@ -22,7 +21,6 @@ public class ProdutosHandler extends DefaultHandler{
 		
 		conteudo = new StringBuilder();
 	}
-
 
 	@Override
 	public void characters(char[] ch, int start, int length) throws SAXException {
@@ -48,6 +46,4 @@ public class ProdutosHandler extends DefaultHandler{
 	public void setProdutos(List<Produto> produtos) {
 		this.produtos = produtos;
 	}
-
-
 }
