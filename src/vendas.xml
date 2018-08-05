@@ -1,19 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<venda moeda="real">
-<formaDePagamento>Cartao</formaDePagamento>
+<?xml version="1.0" ?>
+<venda moeda="real" xsi:noNamespaceSchemaLocation="src/formatoVenda.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <formaDePagamento>Cartao</formaDePagamento>
     <produtos>
         <produto>
-            <nome>Livro de java com xml</nome>
-            <preco>59.90</preco>
+            <nome>Livro da casa do código</nome>
+            <preco>29.90</preco>
         </produto>
         <produto>
-            <nome>Livro de jax-p</nome>
-            <preco>59.90</preco>
-        </produto>
-        <produto>
-            <nome>Livro de O.O em java</nome>
-            <preco>59.90</preco>
+            <nome>Livro de java</nome>
+            <preco>29.90</preco>
         </produto>
     </produtos>
 </venda>

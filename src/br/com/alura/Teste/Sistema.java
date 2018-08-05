@@ -1,22 +1,29 @@
 package br.com.alura.Teste;
 
+import java.io.IOException;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
-
-import br.com.alura.Model.Produto;
-
+import org.xml.sax.SAXException;
 
 public class Sistema {
 	
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws SAXException, IOException, ParserConfigurationException {
+
 		
 		DocumentBuilderFactory fabrica = DocumentBuilderFactory.newInstance();
+		
+		fabrica.setValidating(true);
+		fabrica.setNamespaceAware(true);
+		fabrica.setAttribute("http://java.sun.com/xml/jaxp/properties/schemaLanguage", "http://www.w3.org/2001/XMLSchema");
 		DocumentBuilder builder = fabrica.newDocumentBuilder();
+		
 		Document document = builder.parse("src/vendas.xml");
 		
 		Element venda = document.getDocumentElement();
